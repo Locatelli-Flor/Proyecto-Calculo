@@ -61,7 +61,6 @@ plt.plot(r_values, f_values, label='Función exacta $f(r)$', color='blue')
 plt.plot(r_values, P2_values, label='Polinomio Taylor grado 2', color='red', linestyle='--')
 plt.axvline(RT, color='grey', linestyle=':', label='$r_0 = R_T$')
 
-
 plt.xlabel('r (m)')
 plt.ylabel('Aceleración gravitatoria $m/s^2$')
 plt.title('Función y Polinomio de Taylor grado 2 cerca de $r_0 = R_T$')
