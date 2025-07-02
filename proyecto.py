@@ -1,3 +1,6 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
 G = 6.67e-11
 M = 5.972e24
 RT = 6378000
@@ -40,6 +43,30 @@ h = 8849
 print(f"f(RT + h) = {f(RT + h):.4}")
 print(f"f(RT) = {f(RT):.4}")
 print(f"Diferencia relativa: {(f(RT + h) - f(RT)) / f(RT):.2%}")
+
+print("- Parte 3 -")
+
+print(f"f(RT + h) = {f(RT + h):}")
+print(f"P2(RT + h) = {p2(RT + h,RT ):}")
+print(f"Diferencia relativa ={f(RT + h) - p2(RT + h,RT ):}")
+
+r_values = np.linspace(RT - 5e4, RT + 5e4, 500)  # +/- 50 km alrededor de R_T
+
+# Evaluar función y polinomio
+f_values = f(r_values)
+P2_values = p2(r_values, RT)
+
+plt.figure(figsize=(8,6))
+plt.plot(r_values, f_values, label='Función exacta $f(r)$', color='blue')
+plt.plot(r_values, P2_values, label='Polinomio Taylor grado 2', color='red', linestyle='--')
+plt.axvline(RT, color='grey', linestyle=':', label='$r_0 = R_T$')
+
+plt.xlabel('r (m)')
+plt.ylabel('Aceleración gravitatoria $m/s^2$')
+plt.title('Función y Polinomio de Taylor grado 2 cerca de $r_0 = R_T$')
+plt.legend()
+plt.grid(True)
+plt.show()
 
 print("- 6 -")
 
