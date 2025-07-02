@@ -8,15 +8,15 @@ def f(r):
 
 
 def f1(r):
-    return (G * M) / (2 * r ** 3)
+    return (2 * G * M) / (r ** 3)
 
 
 def f2(r):
-    return -(G * M) / (6 * r ** 4)
+    return -(6 * G * M) / (r ** 4)
 
 
 def f3(r):
-    return (G * M) / (24 * r ** 5)
+    return (24 * G * M) / (r ** 5)
 
 
 def p1(r, a):
