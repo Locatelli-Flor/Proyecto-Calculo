@@ -4,19 +4,19 @@ RT = 6378000
 
 
 def f(r):
-    return -(G*M)/(r**2)
+    return -(G * M) / (r ** 2)
 
 
 def f1(r):
-    return (G*M)/(2*r**3)
+    return (G * M) / (2 * r ** 3)
 
 
 def f2(r):
-    return -(G*M)/(6*r**4)
+    return -(G * M) / (6 * r ** 4)
 
 
 def f3(r):
-    return (G*M)/(24*r**5)
+    return (G * M) / (24 * r ** 5)
 
 
 def p1(r, a):
@@ -24,11 +24,11 @@ def p1(r, a):
 
 
 def p2(r, a):
-    return p1(r, a) + f2(a) / 2 * (r - a)**2
+    return p1(r, a) + f2(a) / 2 * (r - a) ** 2
 
 
 def p3(r, a):
-    return p2(r, a) + f3(a) / 6 * (r - a)**3
+    return p2(r, a) + f3(a) / 6 * (r - a) ** 3
 
 
 print("--- Parte 1 ---")
@@ -39,16 +39,15 @@ h = 8849
 
 print(f"f(RT + h) = {f(RT + h):.4}")
 print(f"f(RT) = {f(RT):.4}")
-print(f"Diferencia relativa: {(f(RT + h) - f(RT))/f(RT):.2%}")
-
+print(f"Diferencia relativa: {(f(RT + h) - f(RT)) / f(RT):.2%}")
 
 print("- 6 -")
 
 print(f"f(0.01) = {f(0.01):.4}")
 print(f"f(0.02) = {f(0.02):.4}")
-print(f"Diferencia relativa: {(f(0.02) - f(0.01))/f(0.01):.2%}")
+print(f"Diferencia relativa: {(f(0.02) - f(0.01)) / f(0.01):.2%}")
 
 print(f"p2(0.02) = {p2(0.02, 0.01):.4}")
-print(f"Diferencia relativa entre p2(0.02) y f(0.02): {(p2(0.02, 0.01) - f(0.02))/f(0.02):.2%}")
+print(f"Diferencia relativa entre p2(0.02) y f(0.02): {(p2(0.02, 0.01) - f(0.02)) / f(0.02):.2%}")
 print(f"p3(0.02) = {p3(0.02, 0.01):.4}")
-print(f"Diferencia relativa entre p3(0.02) y f(0.02): {(p3(0.02, 0.01) - f(0.02))/f(0.02):.2%}")
+print(f"Diferencia relativa entre p3(0.02) y f(0.02): {(p3(0.02, 0.01) - f(0.02)) / f(0.02):.2%}")
