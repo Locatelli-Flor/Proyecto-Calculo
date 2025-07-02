@@ -49,6 +49,6 @@ print(f"f(0.02) = {f(0.02):.4}")
 print(f"Diferencia relativa: {(f(0.02) - f(0.01))/f(0.01):.2%}")
 
 print(f"p2(0.02) = {p2(0.02, 0.01):.4}")
-print(f"Diferencia relativa: {(p2(0.02, 0.01) - f(0.02))/f(0.02):.2%}")
+print(f"Diferencia relativa entre p2(0.02) y f(0.02): {(p2(0.02, 0.01) - f(0.02))/f(0.02):.2%}")
 print(f"p3(0.02) = {p3(0.02, 0.01):.4}")
-print(f"Diferencia relativa: {(p3(0.02, 0.01) - f(0.02))/f(0.02):.2%}")
+print(f"Diferencia relativa entre p3(0.02) y f(0.02): {(p3(0.02, 0.01) - f(0.02))/f(0.02):.2%}")
