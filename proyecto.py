@@ -20,7 +20,7 @@ def f3(r):
 
 
 def p1(r, a):
-    return f(a) + f1(r) * (r - a)
+    return f(a) + f1(a) * (r - a)
 
 
 def p2(r, a):
